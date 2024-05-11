@@ -1,0 +1,66 @@
+/* adding two 3x4 matrices */
+#include<stdio.h>
+#include<conio.h>
+void main ()
+{
+	int a[3][4],b[3][4],c[3][4],i,j;
+	/* asking user elemts of first matrix */
+	printf("Enter element of matrix 1\n");
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			printf("Enter element [%d][%d]:",i,j);
+			scanf("%d",&a[i][j]);
+		}
+	}
+	/* printing first matrix */
+	printf("Matrix 1 :\n");
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	/* asking user elemts of second matrix */
+	printf("Enter element of matrix 2\n");
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			printf("Enter element [%d][%d]:",i,j);
+			scanf("%d",&b[i][j]);
+		}
+	}
+	/* printing second matrix */
+	printf("Matrix 2 :\n");
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	/* adding both matrices */
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			c[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	/* printing the added matrix */
+	printf ("Addition of two matrix is :\n");
+	for (i=0;i<3;i++)
+	{
+		for (j=0;j<4;j++)
+		{
+			printf("%d\t",c[i][j]);
+		}
+		printf("\n");
+	}
+	getch();
+}
